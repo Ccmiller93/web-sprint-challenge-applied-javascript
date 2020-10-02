@@ -24,8 +24,7 @@ import axios from 'axios'
 
 const cardEntryPoint = document.querySelector('.cards-container')
 
-
-function cardMaker({ article }) {
+function cardMaker(article) {
 
     const cardBigDiv = document.createElement('div')
     const headlineDiv = document.createElement('div')
@@ -45,9 +44,9 @@ function cardMaker({ article }) {
     authorDiv.classList.add('author')
     imgDiv.classList.add('img-container')
     
-    headlineDiv.textContent = article.data.headline
-    image.src = article.data.id
-    span.textContent = article.data.authorName
+    headlineDiv.textContent = article.headline
+    image.src = article.authorPhoto
+    span.textContent = `By ${article.authorName}`
 
     cardBigDiv.addEventListener('click', () => {
         console.log(headlineDiv)
@@ -58,17 +57,16 @@ function cardMaker({ article }) {
 
 axios.get('https://lambda-times-api.herokuapp.com/articles')
     .then(res => {
+    console.log("res", res);
         const allArticles = res.data.articles
-
-        console.log("articles", allArticles);
-
-        allArticles.forEach(article => {
-            const cards = cardMaker(article)
-
-            console.log("cards", cards);
-
-            cardEntryPoint.appendChild(cardBigDiv)
+        
+        for (let value in allArticles) {
+            allArticles[value].forEach( (param)=> {
+                const cards = cardMaker(param)
+                console.log("cards", cards);
+                cardEntryPoint.appendChild(cards)
         })
+        }
     })
     .catch(err => {
     console.log("err", err);

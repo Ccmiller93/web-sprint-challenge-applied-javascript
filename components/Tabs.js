@@ -41,5 +41,5 @@ axios.get('https://lambda-times-api.herokuapp.com/topics')
         })
     })
     .catch(err => {
-    // console.log("err", err);
+    console.log("err", err);
     })
