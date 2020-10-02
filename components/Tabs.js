@@ -30,16 +30,16 @@ axios.get('https://lambda-times-api.herokuapp.com/topics')
     .then(res => {
         const topic = res.data.topics 
 
-        console.log("topic", topic);
+        // console.log("topic", topic);
 
         topic.forEach(topic => {
             const topicTab = newTabs(topic)
 
-            console.log("topicTab", topicTab);
+            // console.log("topicTab", topicTab);
 
             tabEntryPoint.appendChild(topicTab)
         })
     })
     .catch(err => {
-    console.log("err", err);
+    // console.log("err", err);
     })

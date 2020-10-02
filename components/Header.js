@@ -32,6 +32,6 @@ function Header() {
 
     return headerDiv
 }
-let = header = Header()
+let header = Header()
 
 headerEntryPoint.appendChild(header)
