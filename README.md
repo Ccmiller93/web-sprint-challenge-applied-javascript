@@ -28,13 +28,23 @@ Be prepared to demonstrate your understanding of this week's concepts by answeri
 
 1. What is the DOM?
 
+the UI element that we can minipulate with JS
+
 2. What is an event?
+
+when the user interacts with the browser 
 
 3. What is an event listener?
 
+telling when a certain event happens then the function fires 
+
 4. Why would we convert a NodeList into an Array?
 
+to be able to use the data 
+
 5. What is a component?
+
+a repeatable code that can be used multiple times and still produce the same effect 
 
 You are expected to be able to answer questions in these areas. Your responses contribute to your Sprint Challenge grade.
 
@@ -57,7 +67,7 @@ You are expected to be able to answer questions in these areas. Your responses c
 - [ ] Run `npm install` to download the dependencies listed in the `package.json` file
 - [ ] Run `npm start` to compile the project and serve it
 - [ ] Navigate Chrome to the URL indicated in the output of the `npm start` command
-
+ 
 ### Task 2: Project Requirements
 
 Your finished project must include all of the following requirements:
